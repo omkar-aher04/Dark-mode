@@ -1,0 +1,78 @@
+img {
+  height: 30px;
+  width: 30px;
+}
+
+p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 70px;
+  font-weight: 800;
+}
+#toggle {
+  height: 60px;
+  width: 34px;
+  border: 2px solid;
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 10px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+
+
+.active {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The toggle track */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+  left: 50vw;
+  bottom: 40px;
+  right: 100px;
+  
+}
+
+/* The toggle circle */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+/* When checked */
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+/* Move the circle when checked */
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
